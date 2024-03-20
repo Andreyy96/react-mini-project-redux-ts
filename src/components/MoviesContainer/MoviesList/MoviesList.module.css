@@ -1,0 +1,15 @@
+.main_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.movies_list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 93.75vw;
+    gap: 25px;
+    padding: 2.317497103128621vh 0
+}

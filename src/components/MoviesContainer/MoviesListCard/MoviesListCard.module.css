@@ -1,0 +1,12 @@
+.movies_list_card {
+    width: 15.625vw;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1.158748551564311vh;
+    cursor: pointer;
+}
+
+.movies_list_card h3{
+    margin: 0.9269988412514484vh 0;
+    font-family: "Colonna MT", serif;
+}

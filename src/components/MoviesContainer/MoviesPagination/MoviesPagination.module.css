@@ -1,0 +1,23 @@
+.pagination_div {
+    padding-bottom: 15px;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+}
+
+.pagination button{
+    color: black;
+}
+
+.paginationBlack {
+    display: flex;
+    justify-content: center;
+}
+
+.paginationBlack button {
+    color: white;
+    background-color: grey;
+}
+

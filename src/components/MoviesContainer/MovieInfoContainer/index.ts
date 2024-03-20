@@ -1,0 +1,5 @@
+export * from "./GenreBadge"
+export * from "./MovieInfo"
+export * from "./ProductionCompany"
+export * from "./ProductionCountry"
+export * from "./StarsRating"

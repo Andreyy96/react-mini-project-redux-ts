@@ -1,0 +1,6 @@
+export * from "./genreInterface"
+export * from "./genreResInterface"
+export * from "./movieInterface"
+export * from "./paginationInterface"
+export * from "./productionCompanyInterface"
+export * from "./productionCountryInterface"

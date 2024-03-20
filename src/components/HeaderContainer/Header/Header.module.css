@@ -1,0 +1,47 @@
+.Header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: gray ;
+    height: 5.793742757821553vh;
+}
+
+.Header h3{
+    color: black;
+    font-family: "Cambria Math", serif;
+}
+
+.Header a {
+    text-decoration: none;
+    color: black;
+    font-size: 26px;
+    margin: 0 0.78125vw;
+    font-family: "Fira Sans", serif;
+}
+
+.Header a:hover {
+    text-decoration: none;
+    color: blue;
+
+}
+
+.Header a[class='active'] {
+    color: red;
+}
+
+
+.navigate_container {
+    width: 27.34375vw
+}
+
+
+.change_background {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.button_search {
+    color: black;
+}

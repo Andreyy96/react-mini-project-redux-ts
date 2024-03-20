@@ -1,0 +1,19 @@
+.genres_list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 10px;
+    gap: 8px;
+}
+
+.genres_list  a{
+    color: black;
+    text-decoration: none;
+}
+
+.genres_list  a:hover{
+    color: blue;
+}
+
+.genres_list p{
+    margin: 0;
+}

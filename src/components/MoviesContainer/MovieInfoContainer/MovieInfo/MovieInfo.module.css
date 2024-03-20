@@ -1,0 +1,71 @@
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main h2 {
+    font-family: "Colonna MT", serif;
+}
+
+.main p {
+    margin: 0.8111239860950174vh 0 0.5793742757821553vh 0;
+    font-size: 18px;
+    font-family: Arial, serif;
+}
+
+.main button {
+    padding: 6px 10px;
+    margin-top: 15px;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+}
+
+.poster {
+    width: 30%;
+    text-align: end;
+}
+
+.poster img{
+    height: 46.34994206257242vh;
+    width: 25.390625vw;
+}
+
+.details {
+    width: 60%;
+    padding-left: 1.171875vw;
+}
+
+.genres_container {
+    margin-left: 2.34375vw;
+    margin-top: 2.317497103128621vh;
+    margin-bottom: 1.158748551564311vh;
+}
+
+.genres_container a {
+    text-decoration: none;
+}
+
+.companies_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px
+}
+
+.countries_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px
+}
+
+.overview {
+    width: 82.8125vw;
+}
+
+.overview h3 {
+    text-align: center;
+    margin: 1.158748551564311vh 0;
+}
