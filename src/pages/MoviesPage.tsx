@@ -1,6 +1,6 @@
-import {MoviesList} from "../components";
+import {Genres, MoviesList} from "../components";
 import {useAppSelector} from "../hooks";
-import {Genres} from "../components/GenresContainer";
+
 
 
 const MoviesPage = () => {

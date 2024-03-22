@@ -1,6 +1,7 @@
 import {FC} from 'react';
 import {Badge} from "@mui/material";
 import {NavLink} from "react-router-dom";
+
 import {IGenre} from "../../../../interfaces";
 
 interface IProps {

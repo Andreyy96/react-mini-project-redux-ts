@@ -1,6 +1,6 @@
 import {Pagination} from "@mui/material";
-import {usePageQuery} from "../../../hooks/usePageQuery";
-import {useAppSelector} from "../../../hooks";
+
+import {useAppSelector, usePageQuery} from "../../../hooks";
 import css from "./MoviesPagination.module.css"
 
 const MoviesPagination = () => {

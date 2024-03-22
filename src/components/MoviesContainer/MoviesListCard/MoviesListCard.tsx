@@ -1,16 +1,18 @@
 import {FC} from 'react';
 import {IMovie} from "../../../interfaces";
-
-import {PosterPreview} from "../PosterPreview";
 import {useNavigate} from "react-router-dom";
-import css from "./MoviesListCard.module.css"
+import {PosterPreview} from "../PosterPreview";
 import {Badge} from "@mui/material";
+
 import {useAppDispatch} from "../../../hooks";
 import {movieActions} from "../../../store";
+import css from "./MoviesListCard.module.css"
+import {StartsRatingMovieCard} from "../StartsRatingMovieCard";
 
 interface IProps {
     movie: IMovie
 }
+
 const MoviesListCard:FC<IProps> = ({movie}) => {
 
     const {id, title, vote_average, poster_path} = movie
@@ -27,6 +29,7 @@ const MoviesListCard:FC<IProps> = ({movie}) => {
             <Badge badgeContent={vote_average.toFixed(1)} color="primary">
                 <PosterPreview poster_path={poster_path}/>
             </Badge>
+            <StartsRatingMovieCard vote_average={vote_average}/>
             <h4>{title}</h4>
         </div>
     );

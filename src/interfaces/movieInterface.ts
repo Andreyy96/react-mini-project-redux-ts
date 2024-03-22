@@ -1,6 +1,7 @@
 import {IGenre} from "./genreInterface";
 import {IProdCompany} from "./productionCompanyInterface";
 import {IProdCountry} from "./productionCountryInterface";
+import {IVideo} from "./videoInterface";
 
 export interface IMovie {
     genres: IGenre[]
@@ -14,4 +15,5 @@ export interface IMovie {
     runtime: number
     title: string
     vote_average: number
+    videos: {results: IVideo[]}
 }

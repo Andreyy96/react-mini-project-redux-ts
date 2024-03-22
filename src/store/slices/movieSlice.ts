@@ -1,6 +1,6 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-
 import {AxiosError} from "axios";
+
 import {movieService} from "../../services";
 import {IMovie, IPagination} from "../../interfaces";
 
@@ -83,11 +83,7 @@ const getByWord = createAsyncThunk<IPagination<IMovie>, {query: string, page: st
 const movieSlice = createSlice({
     name: "movieSlice",
     initialState,
-    reducers: {
-        setMovieInfo: (state, action) => {
-            state.movieInfo = null
-        }
-    },
+    reducers: {},
     extraReducers: builder => builder
         .addCase(getAll.fulfilled, (state, action) => {
             const {page, total_pages, total_results, results} = action.payload

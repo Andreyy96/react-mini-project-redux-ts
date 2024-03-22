@@ -1,8 +1,28 @@
 .search_div {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 15px;
 }
 
 .searchField {
     background: white;
+}
+
+.search_div form {
+    position: relative;
+}
+
+.search_div input {
+    padding-bottom: 0;
+}
+
+.search_div button {
+    height: 24px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    border: none;
+    background: white;
+    cursor: pointer;
 }

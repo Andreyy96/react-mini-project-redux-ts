@@ -1,10 +1,9 @@
-import {useAppDispatch, useAppSelector} from "../../../hooks";
 import {useEffect} from "react";
+import {useSearchParams} from "react-router-dom";
 
 import {movieActions} from "../../../store";
 import {MoviesListCard} from "../MoviesListCard";
-import {usePageQuery} from "../../../hooks/usePageQuery";
-import {useSearchParams} from "react-router-dom";
+import {useAppDispatch, useAppSelector, usePageQuery} from "../../../hooks";
 import {MoviesPagination} from "../MoviesPagination";
 import css from "./MoviesList.module.css"
 
@@ -21,13 +20,13 @@ const MoviesList = () => {
 
     useEffect(() => {
         if (id) {
-            dispatch(movieActions.getByGenreId({id, page}))
+            dispatch(movieActions.getByGenreId({id, page: page.toString()}))
         }
         else if (query) {
-            dispatch(movieActions.getByWord({query, page}))
+            dispatch(movieActions.getByWord({query, page: page.toString()}))
         }
         else {
-            dispatch(movieActions.getAll({page}))
+            dispatch(movieActions.getAll({page: page.toString()}))
         }
     }, [dispatch, page, id, query]);
 

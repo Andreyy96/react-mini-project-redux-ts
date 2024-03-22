@@ -1,9 +1,11 @@
 import {NavLink} from "react-router-dom";
+import {Button} from "@mui/material";
+
 import {useAppDispatch} from "../../../hooks";
 import {headerActions} from "../../../store";
-import css from "./Header.module.css"
-import {Button} from "@mui/material";
 import {ThemesSwitcher} from "../ThemesSwitcher";
+import {UserInfo} from "../UserInfo";
+import css from "./Header.module.css"
 
 const Header = () => {
 
@@ -11,7 +13,7 @@ const Header = () => {
 
     return (
         <div className={css.Header}>
-            <div><h3>MovieDB</h3></div>
+            <div><h2>MovieDB</h2></div>
             <div className={css.navigate_container}>
                 <NavLink to={"movies"}>Movies</NavLink>
                 <NavLink to={"genres"}>Genres</NavLink>
@@ -20,6 +22,7 @@ const Header = () => {
                 <Button variant="text" color={"inherit"} onClick={() => dispatch(headerActions.setFlag())}>Search</Button>
             </div>
             <ThemesSwitcher/>
+            <UserInfo/>
         </div>
     );
 };

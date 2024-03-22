@@ -1,5 +1,6 @@
-import {useAppDispatch, useAppSelector} from "../../../hooks";
 import {FormControlLabel, Switch} from "@mui/material";
+
+import {useAppDispatch, useAppSelector} from "../../../hooks";
 import {headerActions} from "../../../store";
 
 const ThemesSwitcher = () => {

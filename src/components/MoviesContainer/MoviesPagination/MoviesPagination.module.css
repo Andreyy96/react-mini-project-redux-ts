@@ -21,3 +21,6 @@
     background-color: grey;
 }
 
+.paginationBlack div {
+    color: white;
+}

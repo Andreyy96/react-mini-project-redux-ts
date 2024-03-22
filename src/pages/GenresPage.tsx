@@ -1,4 +1,4 @@
-import {Genres} from "../components/GenresContainer";
+import {Genres} from "../components";
 
 const GenresPage = () => {
     return (

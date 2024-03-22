@@ -9,7 +9,7 @@ interface IState {
 }
 
 const initialState: IState= {
-    genresRes: null
+    genresRes: {genres: []}
 }
 
 const getAll = createAsyncThunk<IResGenre, void>(

@@ -1,4 +1,5 @@
 import {FC} from 'react';
+
 import css from "./PosterPreview.module.css"
 
 interface IProps {

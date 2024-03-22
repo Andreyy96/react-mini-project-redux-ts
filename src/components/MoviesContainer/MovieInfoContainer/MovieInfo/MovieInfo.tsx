@@ -1,13 +1,14 @@
 import {FC} from 'react';
-import {IMovie} from "../../../../interfaces";
-import css from "./MovieInfo.module.css"
-import {PosterPreview} from "../../PosterPreview";
 import {Stack} from "@mui/material";
+
+import {IMovie} from "../../../../interfaces";
+import {PosterPreview} from "../../PosterPreview";
 import {ProductionCompany} from "../ProductionCompany";
 import {ProductionCountry} from "../ProductionCountry";
 import {GenreBadge} from "../GenreBadge";
 import {StarsRating} from "../StarsRating";
-import {useNavigate} from "react-router-dom";
+import css from "./MovieInfo.module.css"
+import {MovieTrailer} from "../MovieTrailer";
 
 interface IProps {
     movieInfo: IMovie
@@ -15,13 +16,9 @@ interface IProps {
 const MovieInfo:FC<IProps> = ({movieInfo}) => {
 
     const {title,original_title, poster_path, vote_average, overview,
-        release_date, genres, production_companies, production_countries, runtime} = movieInfo
+        release_date, genres, production_companies, production_countries, runtime, videos: {results}} = movieInfo
 
-
-    // const back = ():void => {
-    //
-    //     navigate(-1)
-    // }
+    const findTrailer = results.find(video => video.type === "Trailer" && (video.name.includes("Trailer") || video.name.includes("TRAILER")))
 
     return (
         <div className={css.main}>
@@ -40,18 +37,19 @@ const MovieInfo:FC<IProps> = ({movieInfo}) => {
                     </Stack>
                 </div>
                 <Stack className={css.companies_container} direction={"row"}>
-                    <p>Companies:</p> {production_companies.map(company => <ProductionCompany company={company} key={company.id}/>)}
+                    <p>Companies:</p> {production_companies.map((company, index) => <ProductionCompany company={company} index={index} count={production_companies.length - 1} key={company.id}/>)}
                 </Stack>
                 <Stack className={css.countries_container} direction={"row"}>
-                    <p>Countries:</p> {production_countries.map(country => <ProductionCountry country={country} key={country.iso_3166_1}/>)}
+                    <p>Countries:</p> {production_countries.map((country, index) => <ProductionCountry country={country} index={index} count={production_countries.length - 1} key={country.iso_3166_1}/>)}
                 </Stack>
                 <p>Runtime: {runtime}min</p>
-                <p>Rating: {vote_average}</p> <StarsRating vote_average={vote_average}/>
+                <p>Rating:</p> <StarsRating vote_average={vote_average}/>
             </div>
             <div className={css.overview}>
                 <h3>Overview</h3>
                 <p>{overview}</p>
             </div>
+            {findTrailer && <MovieTrailer trailer_key={findTrailer.key} />}
         </div>
     );
 };
