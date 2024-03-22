@@ -4,8 +4,6 @@ import {useNavigate} from "react-router-dom";
 import {PosterPreview} from "../PosterPreview";
 import {Badge} from "@mui/material";
 
-import {useAppDispatch} from "../../../hooks";
-import {movieActions} from "../../../store";
 import css from "./MoviesListCard.module.css"
 import {StartsRatingMovieCard} from "../StartsRatingMovieCard";
 
@@ -16,12 +14,10 @@ interface IProps {
 const MoviesListCard:FC<IProps> = ({movie}) => {
 
     const {id, title, vote_average, poster_path} = movie
-    const dispatch = useAppDispatch()
-    const navigate =useNavigate()
+    const navigate = useNavigate()
 
-    const navigateMovieInfo = async (): Promise<void> => {
-       await dispatch(movieActions.getById({id}))
-        navigate(`/movie/${id}`)
+    const navigateMovieInfo =  (): void => {
+        navigate(`${id}`)
     }
 
     return (

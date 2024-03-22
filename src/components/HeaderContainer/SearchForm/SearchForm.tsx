@@ -13,14 +13,14 @@ const SearchForm = () => {
     const dispatch = useAppDispatch()
     const navigate = useNavigate()
 
-    const search: SubmitHandler<{word: string}> = (query) => {
+    const searchByWord: SubmitHandler<{word: string}> = (query) => {
         dispatch(headerActions.setFlag())
         navigate(`/movies?query=${query.word}`)
     }
 
     return (
          <div className={css.search_div}>
-                 <form onSubmit={handleSubmit(search)}>
+                 <form onSubmit={handleSubmit(searchByWord)}>
                      <InputBase
                          className={css.searchField}
                          size={"small"}

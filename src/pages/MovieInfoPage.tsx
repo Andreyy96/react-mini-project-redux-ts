@@ -1,13 +1,10 @@
-import {useAppSelector} from "../hooks";
-import {MovieInfo} from "../components";
+import {MovieInfoResponse} from "../hoc";
 
 const MovieInfoPage = () => {
 
-    const {movieInfo} = useAppSelector(state => state.movies)
-
     return (
         <div>
-            {movieInfo && <MovieInfo movieInfo={movieInfo}/>}
+            <MovieInfoResponse/>
         </div>
     );
 };
