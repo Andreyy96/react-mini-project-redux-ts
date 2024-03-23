@@ -8,7 +8,7 @@ const router = createBrowserRouter([
     {path: "", element: <MainLayout/>, children: [
             {index: true, element: <Navigate to={"movies"}/>},
             {path: "movies", element: <MoviesPage/>},
-            {path: "movies/:id", element: <MovieInfoPage/>},
+            {path: "movie/:id", element: <MovieInfoPage/>},
             {path: 'genres', element: <GenresPage/>}
         ]}
 ])

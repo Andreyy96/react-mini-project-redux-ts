@@ -1,4 +1,5 @@
-import {MovieInfoResponse} from "../hoc";
+import {MovieInfoResponse} from "../components";
+
 
 const MovieInfoPage = () => {
 

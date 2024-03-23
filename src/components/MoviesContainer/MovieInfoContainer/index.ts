@@ -1,5 +1,6 @@
 export * from "./GenreBadge"
 export * from "./MovieInfo"
+export * from "./MovieInfoResponse"
 export * from "./MovieTrailer"
 export * from "./ProductionCompany"
 export * from "./ProductionCountry"
