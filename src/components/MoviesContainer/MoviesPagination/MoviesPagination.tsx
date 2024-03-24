@@ -22,7 +22,7 @@ const MoviesPagination = () => {
             <Pagination
                 className={!switcherState ? css.pagination : css.paginationBlack}
                 count={limit_pages}
-                page={page ? +page : 1}
+                page={+page}
                 onChange={handleChange}
                 size={"medium"}
                 showFirstButton

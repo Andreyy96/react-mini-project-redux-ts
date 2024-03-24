@@ -7,7 +7,7 @@ const usePageQuery = () => {
     const page = query.get('page');
 
     return {
-        page,
+        page: page ? page : "1",
         handleChange: (event: ChangeEvent<unknown>, value: number) => {
             setQuery(prev => {
                 prev.set('page', (value).toString())

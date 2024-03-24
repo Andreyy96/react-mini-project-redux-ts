@@ -14,8 +14,8 @@ const Genre:FC<IProps> = ({genre}) => {
     const {switcherState} = useAppSelector(state => state.header)
 
     return (
-        <div>
-            <NavLink className={!switcherState ? css.switchOff : css.switchOn} to={`/movies?genre_id=${id}`}><p>{name}</p></NavLink>
+        <div className={css.genre}>
+            <NavLink className={switcherState && css.switchOn} to={`/movies?genre_id=${id}`}><p>{name}</p></NavLink>
         </div>
     );
 };

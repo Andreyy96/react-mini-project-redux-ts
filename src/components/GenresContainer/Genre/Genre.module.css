@@ -1,5 +1,18 @@
-.switchOff p{
-    color: black;
+.genre {
+    border: 1px solid black;
+    background: darkgray;
+    padding: 3px;
+    border-radius: 25%;
+    cursor: pointer;
+    font-size: 14px
+}
+
+.genre a:hover{
+    color: blue;
+}
+
+.genre p:hover {
+    color: blue;
 }
 
 .switchOn p{

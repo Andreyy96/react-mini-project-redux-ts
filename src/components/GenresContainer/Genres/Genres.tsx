@@ -15,8 +15,10 @@ const Genres = () => {
     }, [dispatch]);
 
     return (
-        <div className={css.genres_list}>
-            {genresRes.genres.map(genre => <Genre genre={genre} key={genre.id}/>)}
+        <div className={css.genres_div}>
+            <div className={css.genres_list}>
+                {genresRes.genres.map(genre => <Genre genre={genre} key={genre.id}/>)}
+            </div>
         </div>
     );
 };

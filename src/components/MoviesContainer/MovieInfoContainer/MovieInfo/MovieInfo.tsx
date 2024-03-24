@@ -34,20 +34,27 @@ const MovieInfo:FC<IProps> = ({movieInfo}) => {
                 <PosterPreview poster_path={poster_path}/>
             </div>
             <div className={css.details}>
-                <p>Release date: {release_date}</p>
+                <span className={css.span_container}>
+                    <p className={css.bold_text}>Release date:</p>
+                    <p>{release_date}</p>
+                </span>
+
                 <div className={css.genres_container}>
                     <Stack spacing={9} direction={"row"}>
                         {genres.map(genre => <GenreBadge genre={genre} key={genre.id}/>)}
                     </Stack>
                 </div>
                 <Stack className={css.companies_container} direction={"row"}>
-                    <p>Companies:</p> {production_companies.map((company, index) => <ProductionCompany company={company} index={index} count={production_companies.length - 1} key={company.id}/>)}
+                    <p className={css.bold_text}>Companies:</p> {production_companies.map((company, index) => <ProductionCompany company={company} index={index} count={production_companies.length - 1} key={company.id}/>)}
                 </Stack>
                 <Stack className={css.countries_container} direction={"row"}>
-                    <p>Countries:</p> {production_countries.map((country, index) => <ProductionCountry country={country} index={index} count={production_countries.length - 1} key={country.iso_3166_1}/>)}
+                    <p className={css.bold_text}>Countries:</p> {production_countries.map((country, index) => <ProductionCountry country={country} index={index} count={production_countries.length - 1} key={country.iso_3166_1}/>)}
                 </Stack>
-                <p>Runtime: {runtime}min</p>
-                <p>Rating:</p> <StarsRating vote_average={vote_average}/>
+                <span className={css.span_container}>
+                    <p className={css.bold_text}>Runtime: </p>
+                    <p>{runtime}min</p>
+                </span>
+                <p className={css.bold_text}>Rating:</p> <StarsRating vote_average={vote_average}/>
             </div>
             <div className={css.overview}>
                 <h3>Overview</h3>

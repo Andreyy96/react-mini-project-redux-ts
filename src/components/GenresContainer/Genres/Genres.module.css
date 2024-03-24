@@ -1,17 +1,19 @@
+.genres_div {
+    padding-top: 2.317497103128621vh;
+    display: flex;
+    justify-content: center;
+}
+
 .genres_list {
+    width: 85.9375vw;
     display: flex;
     flex-wrap: wrap;
-    padding: 15px 10px;
     gap: 8px;
 }
 
 .genres_list  a{
     color: black;
     text-decoration: none;
-}
-
-.genres_list  a:hover{
-    color: blue;
 }
 
 .genres_list p{

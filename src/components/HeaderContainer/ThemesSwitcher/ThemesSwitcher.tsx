@@ -8,7 +8,7 @@ const ThemesSwitcher = () => {
     const {switcherState} = useAppSelector(state => state.header)
     const dispatch = useAppDispatch()
 
-    const changeThemes = () => {
+    const changeThemes: () => void = () => {
         dispatch(headerActions.setSwitcherState())
     }
 

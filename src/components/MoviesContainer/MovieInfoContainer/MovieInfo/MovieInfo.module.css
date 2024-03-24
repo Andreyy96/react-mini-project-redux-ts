@@ -10,13 +10,23 @@
 
 .main p {
     margin: 0.8111239860950174vh 0 0.5793742757821553vh 0;
-    font-size: 18px;
+    font-size: 16px;
     font-family: Arial, serif;
 }
 
 .main button {
-    padding: 6px 10px;
-    margin-top: 15px;
+    padding: 0.6952491309385863vh 0.78125vw;
+    margin-top: 1.738122827346466vh;
+}
+
+.bold_text {
+    font-weight: bold;
+
+}
+
+.span_container {
+    display: flex;
+    gap: 4px
 }
 
 .title {
@@ -40,7 +50,7 @@
 }
 
 .genres_container {
-    margin-left: 40px;
+    margin-left: 3.125vw;
     margin-top: 2.317497103128621vh;
     margin-bottom: 1.158748551564311vh;
 }

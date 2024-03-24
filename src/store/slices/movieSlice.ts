@@ -6,7 +6,7 @@ import {IMovie, IPagination} from "../../interfaces";
 
 interface IState {
     movies: IMovie[]
-    page: number
+    page: string
     total_pages: number
     total_results: number
     movieInfo: IMovie
@@ -88,7 +88,7 @@ const movieSlice = createSlice({
         .addCase(getAll.fulfilled, (state, action) => {
             const {page, total_pages, total_results, results} = action.payload
             state.movies = results
-            state.page = +page
+            state.page = page
             state.total_pages = total_pages
             state.total_results =total_results
         })
@@ -98,14 +98,14 @@ const movieSlice = createSlice({
         .addCase(getByGenreId.fulfilled, (state, action) => {
             const {page, total_pages, total_results, results} = action.payload
             state.movies = results
-            state.page = +page
+            state.page = page
             state.total_pages = total_pages
             state.total_results =total_results
         })
         .addCase((getByWord.fulfilled), (state, action) => {
             const {page, total_pages, total_results, results} = action.payload
             state.movies = results
-            state.page = +page
+            state.page = page
             state.total_pages = total_pages
             state.total_results =total_results
         })
